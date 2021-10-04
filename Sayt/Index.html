@@ -9,78 +9,64 @@
 </head>
 <body>
     
-<header>
+<header >
+    <div class = "header_wraper">
+    <div class = "header_logo">
+        <img src="IMG/PP.png" alt="PP.png" height="100" width="100">
+    </div>
     <h1>
-Задание по веб-технологиям
-    </h1>
-    <img src="IMG/PP.png" alt="PP.png" height="100" width="100">
-<nav>
-    <ul>
-    <li> <a href="Pages/My.html">О себе</a></li>
-    <li> <a href="Index.html#Jkor">Компетенции</a></li>
-    <li> <a href="Pages/Rezum.html">Резюме</a></li>
-    <li> <a href="Pages/Portf.html">Портфолио</a></li>
-    <li> <a href="Pages/Kontakt.html">Контакты</a></li>
+        Задание по веб-технологиям
+            </h1>
+   
+    <nav class = "header_naw">
+    <ul class = "header_menu">
+    <li class = "header_item"> <a href="Pages/My.html">О себе</a></li>
+    <li class = "header_item"> <a href="Index.html#Jkor">Компетенции</a></li>
+    <li class = "header_item"> <a href="Pages/Rezum.html">Резюме</a></li>
+    <li class = "header_item"> <a href="Pages/Portf.html">Портфолио</a></li>
+    <li class = "header_item"> <a href="Pages/Kontakt.html">Контакты</a></li>
    </ul>
 </nav>
+</div>
 </header>
 
-<main>
-    
-    <table width="80%" border="1">
-        
-        <thead>
-            <tr><title>Опыт работы</title></tr>
-            <tr>
-              <th scope="col">Год</th>
-              <th scope="col">Место работы или учебы, должность</th>
-              <th scope="col">Должностные обязанности</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-                <td>Сентябрь 2016 – август 2019</td>
-                <td>SkyEnglish, Москва, Frontend разработчик</td>
-                <td>
-                    <ul>
-                        <li>Связал данные мобильного приложения с данными сайта</li>
-                        <li>Написал код PHP с функционалом чтения, записи и загрузки данных с мобильного и веб приложения в базу</li>
-                        <li>Создал 2 графика для анализа данных с фильтрами по датам (ежедневно, еженедельно, ежемесячно и ежегодно). Графики включали в себя общие данные о записях пользователя, воспроизведенные с помощью line chart, bar chart & pie chart. Каждая точка на графике может быть детально изучена</li>
-                        <li>Оптимизировал более 20000 строк кода: PHP - 7500, Java for Android - 13000</li>
-                        <li>Работал над безопасностью данных пользователя: шифрование (хэширование) паролей с использованием функции base64_encode</li>
-                    </ul>
-                </td>
-            </tr>
-            
-          </tbody>
-    </table>
-
-    <section>
+<main class = "main">
+        <section>
+        <div class = "html_cards">
+            <div class="card">
 <img src="IMG/Poros.jpg" alt="картинка"height="50" width="50">
 <h1>Заголовок</h1>
-<div>Секция 1</div>
-    </section>
-    <section>
+</div>
+<div class="card" >
         <a name="Jkor"></a>
         <i class="fas fa-address-card"></i>
         <h2>Картинка1</h2>
+    </div>
+        <div class="card" >
         <i class="fab fa-amazon"></i>
         <h2>Картинка2</h2>
+    </div>
+    </div>
+
     </section>
-    <section></section>
-    <section></section>
+    <section>
     <div>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste sequi quibusdam vitae! Adipisci nemo autem tempore mollitia. Ducimus quasi mollitia, eligendi quia libero magnam natus consectetur eius facere vero! Laborum.
     </div>
+</section>
 </main>
 
-<footer>
-<div>
+<footer class = "footer">
+    <div class = "footer_wraper">
+<div class = "footer_text">
     Сайт разработан Малыгиной Анастасией, Copyright © 2021
 </div>
-<i class="fab fa-vk"></i>
-<i class="fab fa-instagram"></i>
-<i class="fab fa-facebook"></i>
+<div class = "footer_menu">
+<i class="fab fa-vk" class = "footer_item"></i>
+<i class="fab fa-instagram" class = "footer_item"></i>
+<i class="fab fa-facebook" class = "footer_item"></i>
+</div>
+</div>
 </footer>
 </body>
 </html>

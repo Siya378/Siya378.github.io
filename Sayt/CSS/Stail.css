@@ -1,6 +1,52 @@
 header {background-color: bisque;}
-
-
+main {background-color: aquamarine;}
+footer {background-color: darkkhaki;}
+.header_wraper
+{
+	display: flex;
+	flex-wrap:wrap;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+.header_logo
+{
+	flex-basis: 20%;
+}
+.header_menu
+{
+	display:flex;
+	flex-wrap: wrap;
+}
+.header_item
+{
+	margin-right: 30px;
+}
+.html_cards
+{
+display: grid;
+grid-template-columns: repeat(auto-fill, 20%);
+}
+.card
+{
+grid-column: span 1;
+margin-bottom: 10px;
+}
+.footer_wraper
+{
+	display: flex;
+	flex-wrap:wrap;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+.footer_item
+{
+	margin-right: 100px;
+}
+.footer_menu
+{
+	display:flex;
+	flex-wrap: wrap;
+}
 .table {
 	width: 70%;
 	margin-bottom: 20px;
