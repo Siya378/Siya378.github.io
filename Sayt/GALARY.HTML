@@ -38,19 +38,56 @@
             width: 256px;
             height: 256px;
             margin: 20 auto;
+            overflow: hidden;
         }
 
-        .slider-lines
+        .slider-line
         {
             display: flex;
             height: 256px;
             width: 1024px;
             background:salmon;
+            position: relative;
+            left: 0;
+            transition: all ease 1s;
         }
         .smallp{
             height: 190px;
         }
+
+        .container2{
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: rgb(132, 180, 223);
+            padding: 100px 50px;
+            text-align: center;
+        }
+
+        .zoom{
+            display: flex;
+            width: 100%;
+        }
+        .zoom.sidebar{
+            flex-basis: 30%;
+            display: flex;
+            flex-direction: column ;
+        }
+        .zoom.sidebar.small-preview{
+            width: 100%;
+            margin-bottom: 5px;
+        }
+        .zoom.sidebar.small-preview:last-child{
+            margin-bottom: 0px;
+        }
+        .zoom.zoom-image{
+            flex: 1;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-left: 5px;
+        }
     </style>
+    
 </head>
 <body>
 
@@ -102,7 +139,7 @@
 
             }
         </script>
-
+</section>
         <!--Двигаем картинки кнопками-->
         <section>
             <div class="container1">
@@ -120,8 +157,33 @@
             <script>
 let offset =0;
 const sliderLine = document.querySelector('.slider-line')
+document.querySelector('.slider-next').addEventListener('click',function(){
+    offset=offset+256;
+    if(offset>768){offset=0;}
+    sliderLine.style.left=-offset+"px"
+});
+
+document.querySelector('.slider-prev').addEventListener('click',function(){
+    offset=offset-256;
+    if(offset<0){offset=768;}
+    sliderLine.style.left=-offset+"px"
+});
+
             </script>
         </section>
-    </section>
+        <section>
+            <div class="container2">
+                <div class="zoom">
+                    <div class = "zoom-image">  </div>                
+                    <div class="sidebar"> 
+                        <img src="galary_img/1.jpg" alt="" class="small-preview">
+                        <img src="galary_img/2.jpg" alt="" class="small-preview">
+                        <img src="galary_img/3.jpg" alt="" class="small-preview">
+                    </div>
+                </div>
+            </div>           
+                
+        </section>
+      
 </body>
 </html>
