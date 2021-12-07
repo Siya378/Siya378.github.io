@@ -9,36 +9,113 @@
 </head>
 <body>
     
-<header>
-    <h1>
-Задание по веб-технологиям
-    </h1>
-    <img src="IMG/PP.png" alt="PP.png" height="100" width="100">
-<nav>
-    <ul>
-    <li> <a href="Pages/My.html">О себе</a></li>
-    <li> <a href="Pages/Kopmetencii.html">Компетенции  11</a></li>
-    <li> <a href="Pages/Rezum.html">Резюме</a></li>
-    <li> <a href="Pages/Portf.html">Портфолио</a></li>
-    <li> <a href="Pages/Kontakt.html">Контакты</a></li>
-   </ul>
-</nav>
-</header>
+    <header >
+        <div class = "header_wraper">
+        <div class = "header_logo">
+            <img src="IMG/PP.png" alt="PP.png" height="100" width="100">
+        </div>
+              
+        <nav class = "header_naw">
+        <ul class = "header_menu">
+        <li class = "header_item"> <a href="Pages/My.html">О себе</a></li>
+        <li class = "header_item"> <a href="Index.html#Jkor">Компетенции</a></li>
+        <li class = "header_item"> <a href="Pages/Rezum.html">Резюме</a></li>
+        <li class = "header_item"> <a href="Pages/Portf.html">Портфолио</a></li>
+        <li class = "header_item"> <a href="Pages/Kontakt.html">Контакты</a></li>
+        <li class = "header_item"> <a href="js.html">Задание JS</a></li>
+       </ul>
+    </nav>
+    </div>
+    <div class="header">
+        <!-- Шапка страницы -->
+        <h1 class="header-title">Веб - технологии</h1>
+        <h3 class="header-title">Университет "Дубна"</h3>
+    </div>
+ 
+    </header>  
 
 <main>
+    <div class="wraper">
+        <div class="main_wraper ">
+            <div style="max-width: 730px;"  >
+                <h1>Дисней</h1>
+                <p>Один из крупнейших медиаконгломератов индустрии развлечений в мире. Основанная 16 октября 1923 года братьями Уолтером Элайасом и Роем Оливером Диснеями как небольшая анимационная студия, в настоящее время является одной из крупнейших транснациональных медиакорпораций, одной из крупнейших голливудских студий, владельцем 11 парков развлечений и двух аквапарков, а также нескольких сетей телерадиовещания, к числу которых относится американская телерадиовещательная компания.</p>
+            </div>
+            <div style="margin-top: 20px;">
+                <img src="IMG/Mylt.jpg" alt="PP.png" height="200" width="270">
+            </div>
+        </div>
+
+    </div>
     
+    <div class="wraper">
+        <h1 class="Centr">Мои Компетенции</h1>
+        <div style="display: flex; justify-content: space-between;">
+            <div>
+                <img  src="IMG/Mylt.jpg" alt="PP.png" height="250" width="300">
+                 <p >Подпись</p>
+            </div>
+            <div>
+                <img src="IMG/Mylt.jpg" alt="PP.png" height="250" width="300">
+                <p>Подпись</p>
+            </div>
+            <div>
+                <img src="IMG/Mylt.jpg" alt="PP.png" height="250" width="300">
+                <p>Подпись</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="wraper"> 
+        <h1 class="Centr"> Заголовок</h1>    
+        <div class="Centr">
+            <nav>
+                <ul>
+                <li >О себе</a></li>
+                <li >Компетенции</a></li>
+                <li >Резюме</a></li>
+                <li >Портфолио</a></li>
+              </ul>
+            </nav>
+
+            <nav>
+                <ul>
+                <li >О себе</a></li>
+                <li >Компетенции</a></li>
+                <li >Резюме</a></li>
+                <li >Портфолио</a></li>
+              </ul>
+            </nav>
+
+        </div>
+</div>
+
+<div class="wraper">
+    <h1 class="Centr"> Заголовок</h1>    
     <div>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste sequi quibusdam vitae! Adipisci nemo autem tempore mollitia. Ducimus quasi mollitia, eligendi quia libero magnam natus consectetur eius facere vero! Laborum.
     </div>
+    
+<div  id="proda" style=" display:none;">Продолжение</div>
+<button onclick="(document.getElementById('proda').style.display='block')">Подробнее</button> 
+</div>
 </main>
 
 <footer>
-<div>
-    Сайт разработан Малыгиной Анастасией, Copyright © 2021
-</div>
-<i class="fab fa-vk"></i>
-<i class="fab fa-instagram"></i>
-<i class="fab fa-facebook"></i>
-</footer>
-</body>
-</html>
+    <div class="footer_wraper">
+        <div class="footer_menu">
+            <img class="item" src="../IMG/LogoFace.jpg" alt="Лого Фэйсб"  >
+            <img  class="item" src="../IMG/LogoInsta.jpg" alt="Лого Инст"  >
+            <img  class="item" src="../IMG/LogoVk.png.jpg" alt="Лого Вк"  >    
+            </div>
+  <div class="footer_item"> 
+        Сайт разработан Малыгиной Анастасией, Copyright © 2021
+  </div>
+  
+  </div>
+  </footer>
+  </body>
+  </html>
+  

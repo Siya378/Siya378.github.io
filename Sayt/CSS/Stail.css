@@ -1,40 +1,67 @@
-header {background-color: bisque;}
+/* header {background-color: bisque;} */
 /* main {background-color: aquamarine;} */
 footer {background-color: darkkhaki;}
+/* Меню */
 .wraper{
-	max-width: 1060px;
+	max-width: 1024px;
 	margin: 0 auto;
+
 }
-.header_wraper
+.header_wraper 
 {
 	display: flex;
 	flex-wrap:wrap;
-	align-items: flex-end;
-	justify-content: space-between;
+	align-items: flex-end; /*перпендик ось */
+	justify-content: space-between; /* одинак расст между боками */
+	background-image: url(../IMG/header.jpg);
+	background-position:top;
 }
 .header_logo
 {
-	flex-basis: 20%;
+	flex-basis: 30%;
 }
 
 .header_menu
 {
 	display:flex;
-	flex-wrap: wrap;
+	flex-wrap: wrap;	
 }
 .header_ul{
-	margin: 0;
-	padding: 4px;
-}
-.li{
-display: inline;
-margin-right: 5px;
-}
+	display: flex;
+	flex-basis: 14%;
+	margin: 10px;
+	padding: 10px;	
+	}
 
 .header_item
 {
-	margin-right: 30px;
+	margin-right: 50px;
+	border-left : 1px solid rgb(15, 15, 15);
+    padding: 5px;
+	
+	
 }
+.header_item:last-child{
+	margin-right: 0;
+	}
+	/* Шапка с картинкой */
+.header
+	{
+		text-align: center;
+		background-image: url(../IMG/header.jpg);
+				background-repeat: no-repeat; /* одно фоновое изображение в элементе без его повторени */
+		background-position:top; /* начальное положение фонового изображения (верх) */
+			background-attachment: fixed;/* Делает фоновое изображение элемента неподвижным. */
+		background-size: cover;
+		padding-left: center;/* поля */
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	.header-title{
+		font-size: 30px;
+		}
+	 
+
 
 .html_cards
 {
@@ -53,14 +80,21 @@ margin-bottom: 10px;
 	align-items: flex-end;
 	justify-content: space-between;
 }
+.item{
+	margin-right: 5px;
+	height: 30px;
+	width: 30;
+}
 .footer_item
 {
 	margin-right: 100px;
+	
 }
 .footer_menu
 {
 	display:flex;
 	flex-wrap: wrap;
+	margin-right: 20px;
 }
 .table {
 	width: 70%;
@@ -146,6 +180,27 @@ margin-bottom: 10px;
 	main{
 		background: var(--background_color);
 		color: var(--text_color);
+	}
+	
+	.main_wraper
+	{
+		display: flex;
+		flex-wrap:wrap;
+		align-items: flex-end; /*перпендик ось */
+		justify-content: space-between; /* одинак расст между боками */
+	
+	}
+	.Centr{
+		display: flex; 
+		justify-content:center;
+	}
+	.Portf_wraper{
+		display: flex;
+		flex-wrap:wrap;
+		align-items: flex-end; /*перпендик ось */
+		justify-content: space-between; /* одинак расст между боками */
+		
+	
 	}
 	
 
