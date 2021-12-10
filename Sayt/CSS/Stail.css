@@ -199,8 +199,21 @@ margin-bottom: 10px;
 		flex-wrap:wrap;
 		align-items: flex-end; /*перпендик ось */
 		justify-content: space-between; /* одинак расст между боками */
+	}
+		
+		.Kontakt{
+		margin-top: 50px;
+		margin-bottom: 150px;
+			width: 20%;
+			height: 170px;
+			border: 3px solid #706233 ;
+			text-align: center;
+			
+			
+
+		}
 		
 	
-	}
+	
 	
 
