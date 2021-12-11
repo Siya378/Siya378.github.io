@@ -30,35 +30,42 @@ console.log(name+" "+email+" "+tel);
 
 <body >
     
-<header class="header">
-    <div class="wraper">
-        <div class="header_wraper">
-            <div class="header_logo">
-                <a href="Example.html" target="_blank"> <img src="IMG/PP.png" width="100" alt="Логотип"></a>
-            </div>
-            <nav >
-                <ul class="header_ul">
-                <li class="li"> <a href="Pages/My.html">О себе</a></li>
-                <li class="li"> <a href="Pages/Kopmetencii.html">Компетенции</a></li>
-                <li class="li"> <a href="Pages/Rezum.html">Резюме</a></li>
-                <li class="li"> <a href="Pages/Portf.html">Портфолио</a></li>
-                <li class="li"> <a href="Pages/Kontakt.html">Контакты</a></li>
-               </ul>
-            </nav>
+    <header >
+        <div class = "header_wraper">
+        <div class = "header_logo">
+            <img src="IMG/PP.png" alt="PP.png" height="100" width="100">
         </div>
-
-        <h2 class="text">Веб-технологии</h2>
+              
+        <nav class = "header_naw">
+        <ul class = "header_menu">
+        <li class = "header_item"> <a href="../Sayt/Pages/My.html">О себе</a></li>
+        <li class = "header_item"> <a href="Example.html#Kompet"> Компетенции</a></li>
+        <li class = "header_item"> <a href="../Sayt/Pages/Rezum.html">Резюме</a></li>
+        <li class = "header_item"> <a href="../Sayt/Pages/Portf.html">Портфолио</a></li>
+        <li class = "header_item"> <a href="../Sayt/Pages/Kontakt.html">Контакты</a></li>
+        <li class = "header_item"> <a href="js.html">Задание JS</a></li>
+       </ul>
+    </nav>
     </div>
-</header>  
+    <div class="header">
+        <!-- Шапка страницы -->
+        <h1 class="header-title">Веб - технологии</h1>
+        <h3 class="header-title">Университет "Дубна"</h3>
+    </div>
+ 
+    </header>  
 
 <main class = "main">
+    <div class="wraper">
     <div> <!-- Выбор темы -->
-        <div>Выберите тему</div>
-        <select id="theme">
-            <option value="auto">по умолч</option>
-            <option value="light">светл</option>
-            <option value="dark">темное</option>
+        <div class="Centr" style="color: rgb(148, 100, 56); "> <p style="font-size: 30px;"> Выберите тему</p></div>
+        <div class="Centr">
+        <select  id="theme">
+            <option value="auto">По умолчанию</option>
+            <option value="light">Светлая</option>
+            <option value="dark">Темная</option>
         </select>
+        </div>
         <script>
             function applyTheme(theme){
                 document.body.classList.remove("theme-auto","theme-light","theme-dark");
@@ -88,9 +95,10 @@ console.log(name+" "+email+" "+tel);
         });
     </script>
     </div>
-    <div>
+    <div > <!-- Кнопки -->
         <!-- Кнопка для формы -->
-        <p id="Forma_da" onclick="document.getElementById('Forma').style.display='block';
+        <div class="Centr_knop">
+        <p  id="Forma_da" onclick="document.getElementById('Forma').style.display='block';
          document.getElementById('Forma_da').style.display='none'; 
          document.getElementById('Forma_net').style.display='block';"
           style="display:none;">Форма</p>
@@ -98,8 +106,10 @@ console.log(name+" "+email+" "+tel);
         <p id="Forma_net" onclick=" document.getElementById('Forma').style.display='none';
          document.getElementById('Forma_net').style.display='none'; 
          document.getElementById('Forma_da').style.display='block';">Форма</p> 
+         </div>
 
          <!-- Кнопка для некоп текста -->
+         <div class="Centr_knop">
          <p id="Noselect_da" onclick="document.getElementById('Noselect').style.display='block';
          document.getElementById('Noselect_da').style.display='none'; 
          document.getElementById('Noselect_net').style.display='block';"
@@ -108,8 +118,10 @@ console.log(name+" "+email+" "+tel);
         <p id="Noselect_net" onclick=" document.getElementById('Noselect').style.display='none';
          document.getElementById('Noselect_net').style.display='none'; 
          document.getElementById('Noselect_da').style.display='block';">Некопирующийся текст</p>
+         </div>
 
          <!-- Кнопка для текст ареа -->
+         <div class="Centr_knop">
          <p id="Area_da" onclick="document.getElementById('Area').style.display='block';
          document.getElementById('Area_da').style.display='none'; 
          document.getElementById('Area_net').style.display='block';"
@@ -118,8 +130,10 @@ console.log(name+" "+email+" "+tel);
         <p id="Area_net" onclick=" document.getElementById('Area').style.display='none';
          document.getElementById('Area_net').style.display='none'; 
          document.getElementById('Area_da').style.display='block';">Текст ареа</p>
+         </div>
 
          <!-- Кнопка для галереи -->
+         <div class="Centr_knop">
          <p id="Gallary_da" onclick="document.getElementById('Gallary').style.display='block';
          document.getElementById('Gallary_da').style.display='none'; 
          document.getElementById('Gallary_net').style.display='block';"
@@ -129,9 +143,10 @@ console.log(name+" "+email+" "+tel);
          document.getElementById('Gallary_net').style.display='none'; 
          document.getElementById('Gallary_da').style.display='block';">Галерея</p>
          </div>
+         </div>
 <div >
                 
-    <div class="main-form" id="Forma" > 
+    <div class="main-form"  id="Forma" > 
         <form action="" method="GET" id="form1" onsubmit="return checkForm(this)">
             <div class="form-div">
             <div>    Как вам удобно получить ответ?</div>
@@ -179,16 +194,16 @@ console.log(name+" "+email+" "+tel);
             </form>         
     
         </div>
-        <div class="main-form" id="Noselect" > 
+        <div class="main-form"  id="Noselect" > 
             <div class="noselect">
                 Текст, который не копируется
-            </div>
-            <div >
-                <img class="img" src="IMG/Poros.jpg" alt="">
+            </div><br>
+            <div  >
+                <img class="img"  src="IMG/Poros.jpg" alt="">
             </div>
         </div>
         <div class="main-form" id="Area"> 
-                <textarea  style="width:500px; height: 450px;" id="area" ></textarea>
+                <textarea  class="img" id="area" ></textarea>
         <br>
         <button onclick="localStorage.removeItem('area');area.value=''">Очистить</button>
         <script>
@@ -205,10 +220,10 @@ console.log(name+" "+email+" "+tel);
                 <div id="big" >
         <img src="galary_img/1.jpg" alt="" width="900" id="bigp" class="bigp">
             </div>
-            <div>
-                <img src="galary_img/1.jpg" alt="" width="300"  class="smallp">
-                <img src="galary_img/2.jpg" alt="" width="300"  class="smallp">
-                <img src="galary_img/3.jpg" alt="" width="300"  class="smallp">
+            <div style="display: flex; justify-content: space-between;">
+                <img src="galary_img/1.jpg" alt=""  class="smallp">
+                <img src="galary_img/2.jpg" alt=""   class="smallp">
+                <img src="galary_img/3.jpg" alt=""  class="smallp">
                 </div>
             </div>
             <script>
@@ -230,7 +245,7 @@ console.log(name+" "+email+" "+tel);
         </div>
 
 </div>
-    
+</div>
 </main>
 
 </body>

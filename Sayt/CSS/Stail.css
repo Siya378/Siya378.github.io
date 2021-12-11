@@ -1,6 +1,7 @@
 /* header {background-color: bisque;} */
-/* main {background-color: aquamarine;} */
-footer {background-color: darkkhaki;}
+main {background-color: rgb(240, 228, 223);}
+footer { color: rgb(148, 100, 56);
+	background-color: rgb(238,218,211)	;}
 /* Меню */
 .wraper{
 	max-width: 1024px;
@@ -13,18 +14,22 @@ footer {background-color: darkkhaki;}
 	flex-wrap:wrap;
 	align-items: flex-end; /*перпендик ось */
 	justify-content: space-between; /* одинак расст между боками */
-	background-image: url(../IMG/header.jpg);
-	background-position:top;
-}
+	background-color: rgb(238,218,211);	
+	color: rgb(148, 100, 56);
+	}
 .header_logo
 {
+	
 	flex-basis: 30%;
+	margin-left: 50px;
 }
 
 .header_menu
 {
 	display:flex;
 	flex-wrap: wrap;	
+	
+	
 }
 .header_ul{
 	display: flex;
@@ -36,9 +41,8 @@ footer {background-color: darkkhaki;}
 .header_item
 {
 	margin-right: 50px;
-	border-left : 1px solid rgb(15, 15, 15);
-    padding: 5px;
-	
+	border-left : 2px solid rgb(148, 100, 56);
+    padding: 5px;	
 	
 }
 .header_item:last-child{
@@ -47,7 +51,7 @@ footer {background-color: darkkhaki;}
 	/* Шапка с картинкой */
 .header
 	{
-		text-align: center;
+		text-align: right;
 		background-image: url(../IMG/header.jpg);
 				background-repeat: no-repeat; /* одно фоновое изображение в элементе без его повторени */
 		background-position:top; /* начальное положение фонового изображения (верх) */
@@ -59,11 +63,13 @@ footer {background-color: darkkhaki;}
 	}
 	.header-title{
 		font-size: 30px;
+		color: rgb(148, 100, 56);
+		margin-right: 150px;
 		}
 	 
 
 
-.html_cards
+/* .html_cards
 {
 display: grid;
 grid-template-columns: repeat(auto-fill, 20%);
@@ -72,13 +78,14 @@ grid-template-columns: repeat(auto-fill, 20%);
 {
 grid-column: span 1;
 margin-bottom: 10px;
-}
+} */
 .footer_wraper
 {
 	display: flex;
 	flex-wrap:wrap;
 	align-items: flex-end;
 	justify-content: space-between;
+	border: 2px solid rgb(148, 100, 56);
 }
 .item{
 	margin-right: 5px;
@@ -96,6 +103,9 @@ margin-bottom: 10px;
 	flex-wrap: wrap;
 	margin-right: 20px;
 }
+.footer_menu:first-child{
+	margin-left: 50px;
+}
 .table {
 	width: 70%;
 	margin-bottom: 20px;
@@ -103,19 +113,20 @@ margin-bottom: 10px;
 	border-top: 5px solid #fff;
 	border-bottom: 3px solid #fff;
 	border-collapse: collapse; 
-	outline: 3px solid #ffd300;
+	outline: 3px solid rgb(148, 100, 56);
 	font-size: 15px;
 	background: #fff!important;
+	
 }
 .table th {
 	font-weight: bold;
 	padding: 7px;
-	background: #ffd300;
+	background: rgb(238,218,211);
 	border: none;
 	text-align: center;
 	font-size: 28px;
 	border-top: 3px solid #fff;
-	border-bottom: 3px solid #ffd300;
+	border-bottom: 3px solid rgb(148, 100, 56);
 }
 .table td {
 	padding: 35px;
@@ -126,7 +137,7 @@ margin-bottom: 10px;
 	font-size: 15px;
 }
 .table tbody tr:nth-child(even){
-	background: #f8f8f8!important;
+	background: #fff!important;
 }
 /* .grid-container
 {
@@ -139,18 +150,20 @@ margin-bottom: 10px;
 	margin-top: 20px; отступ сверху
 	padding-top: 200 px; отступ сверху
 } */
+
 .main-form{
 	
-	width: 77%; /* ширина */
 	padding: 40px; /* отступы */
-	border-radius: 40px; /* скруглить углы */
-	box-shadow: 3px solid rgb(73, 23, 211); /* тень */
-	margin-left: auto;
-	margin-right: auto;
+	text-align: center;
+	border-bottom: 2px solid #b19f64 ;
 }
+.main-form :last-child{
+	border: none;
+}
+
 .img{
-	width: 50%;
-	height: 50%;
+	width: 20%;
+	height: 20%;
 
 }
 
@@ -164,13 +177,14 @@ margin-bottom: 10px;
 	}
 	/* галерея */
 	.smallp{
+		margin-top: 5%;
 		height: 150px;
-		width: 194px;
+		width: 30%;
 		
 	}
 	.bigp{
-		height: 300px;
-		width: 590px;
+		height: 50%;
+		width: 70%;
 		align-items: center;
 	}
 	
@@ -206,7 +220,7 @@ margin-bottom: 10px;
 
 
 		body {
-			--background-color: #f3ebeb;
+			--background-color: rgb(241, 230, 226);
 			--text-color: #000000;
 		}
 		.main {
@@ -214,13 +228,13 @@ margin-bottom: 10px;
 			color: var(--text-color);
 		}
 		
-		button {
+		/* button {
 			color: var(--text-color);
-		}
+		} */
 		
 		:root {
-			--dark-background-color: #111111;
-			--dark-text-color: hsl(0, 0%, 97%);
+			--dark-background-color: #2e2a1d;
+			--dark-text-color: hsl(0, 50%, 94%);
 		}
 		
 		body.theme-dark {
@@ -233,6 +247,12 @@ margin-bottom: 10px;
 				--text-color: var(--dark-text-color);
 			}
 		}
+		.Centr_knop{
+			display: flex; 
+			justify-content:center;
+			border-bottom: 2px solid #706233 ;
+		}
+		
 		
 			
 	
