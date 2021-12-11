@@ -128,23 +128,25 @@ margin-bottom: 10px;
 .table tbody tr:nth-child(even){
 	background: #f8f8f8!important;
 }
-.grid-container
+/* .grid-container
 {
-	display: grid; /* все эл-ты =грид */
-	justify-content: center; /* по центру */
-	grid-template-columns: 1fr 1fr; /* сколько столбцов (равных) */
-	grid-template-rows: 1fr 1fr 1fr; /* сколько строк (равных) */
+	display: grid; все эл-ты =грид
+	justify-content: center; по центру
+	grid-template-columns: 1fr; сколько столбцов (равных)
+	grid-template-rows: 1fr 1fr 1fr; сколько строк (равных)
 	grid-gap: 2vw; 
 	justify-items:center;
-	margin-top: 20px; /* отступ сверху */
-	padding-top: 200 px; /* отступ сверху */
-}
+	margin-top: 20px; отступ сверху
+	padding-top: 200 px; отступ сверху
+} */
 .main-form{
+	
 	width: 77%; /* ширина */
-	border: 7px solid rgb(137, 198, 255); /* граница */
 	padding: 40px; /* отступы */
 	border-radius: 40px; /* скруглить углы */
 	box-shadow: 3px solid rgb(73, 23, 211); /* тень */
+	margin-left: auto;
+	margin-right: auto;
 }
 .img{
 	width: 50%;
@@ -170,16 +172,6 @@ margin-bottom: 10px;
 		height: 300px;
 		width: 590px;
 		align-items: center;
-	}
-	:root{
---background_color: #edf0c5;
---text_color: #1e1f1d;
---dark_background_color: #1f1f1d;
---dark_text_color: #dff3ca;
-	}
-	main{
-		background: var(--background_color);
-		color: var(--text_color);
 	}
 	
 	.main_wraper
@@ -208,11 +200,41 @@ margin-bottom: 10px;
 			height: 170px;
 			border: 3px solid #706233 ;
 			text-align: center;
-			
-			
+		}
 
+		/* Выбор темы */
+
+
+		body {
+			--background-color: #f3ebeb;
+			--text-color: #000000;
+		}
+		.main {
+			background: var(--background-color);
+			color: var(--text-color);
 		}
 		
+		button {
+			color: var(--text-color);
+		}
+		
+		:root {
+			--dark-background-color: #111111;
+			--dark-text-color: hsl(0, 0%, 97%);
+		}
+		
+		body.theme-dark {
+			--background-color: var(--dark-background-color);
+			--text-color: var(--dark-text-color);
+		}
+		@media (prefers-color-scheme: dark) {/*  Исп ли опер сист темную тему? Да-и мы исп */
+			body.theme-auto {
+				--background-color: var(--dark-background-color);
+				--text-color: var(--dark-text-color);
+			}
+		}
+		
+			
 	
 	
 	
