@@ -38,7 +38,7 @@ console.log(name+" "+email+" "+tel);
               
         <nav class = "header_naw">
         <ul class = "header_menu">
-        <li class = "header_item"> <a href="../Sayt/Pages/My.html">О себе</a></li>
+        <li class = "header_item"> <a href="Example.html">О себе</a></li>
         <li class = "header_item"> <a href="Example.html#Kompet"> Компетенции</a></li>
         <li class = "header_item"> <a href="../Sayt/Pages/Rezum.html">Резюме</a></li>
         <li class = "header_item"> <a href="../Sayt/Pages/Portf.html">Портфолио</a></li>
@@ -240,8 +240,144 @@ console.log(name+" "+email+" "+tel);
                 }
             </script>
         </section> </div>
-        <div class="main-form"> </div>
-        <div class="main-form"> </div>
+        <div class="main-form"> 
+            <!-- диаграмма -->
+    <section class="chart">
+        <h1 class="chart__title">Популярность языков программирования</h1>
+    
+        <form class="chart__data" action="#" method="POST">
+          <div class="chart__input-group">
+            <label class="chart__label" for="javascript">JavaScript</label>
+            <input
+              class="chart__input input-field" type="number"name="javascript" id="javascript"
+              min="0"
+              max="100"
+              required
+            >
+            <span>%</span>
+          </div>
+          <div class="chart__input-group">
+            <label class="chart__label" for="php">php</label>
+            <input
+              class="chart__input input-field" type="number"name="php" id="php"
+              min="0"
+              max="100"
+              required
+            >
+            <span>%</span>
+          </div>
+          <div class="chart__input-group">
+            <label class="chart__label" for="pyton">pyton</label>
+            <input
+              class="chart__input input-field" type="number"name="pyton" id="pyton"
+              min="0"
+              max="100"
+              required
+            >
+            <span>%</span>
+          </div>    
+       
+          <input
+            class="chart__submit-button input-field"
+            type="submit"
+            value="Показать график"
+          >
+        </form>
+    
+        <div class="chart__canvas-wrapper">
+            <canvas id="canvas" width="500" height="250" >
+              Браузер не поддерживает Canvas
+            </canvas>
+          </div>
+        <script>
+            const COLORS = [
+  `#b3d5fc`,
+  `#98d9d9`,
+  `#ede493`
+];
+
+const MAX_PERCENTAGE = 100;
+
+const Gap = {
+  HORIZONTAL: 100,
+  VERTICAL: 30
+}
+
+const BarCoordinate = {
+  INITIAL_X: 80,
+  INITIAL_Y: 220
+}
+
+const BarSize = {
+  MAX_HEIGHT: 190,
+  WIDTH: 50
+};
+
+const LabelCoordinate = {
+  INITIAL_X: 30,
+  INITIAL_Y: 70
+}
+
+const Font = {
+  SIZE: `18px`,
+  FAMILY: `Tahoma`
+};
+
+const inputElements = document.querySelectorAll(`.chart__input`); 
+
+const getData = (inputElements) => {
+  return Array.from(inputElements).map((input, index) => ({
+    name: input.name,
+    value: input.value,
+    color: COLORS[index]
+  }));
+};
+
+const items = getData(inputElements);
+const formElement = document.querySelector(`.chart__data`);
+const canvas = document.querySelector(`#canvas`);
+const ctx = canvas.getContext(`2d`);
+
+// Получаем на вход items — массив объектов с данными
+const renderChart = (items) => {
+   ctx.clearRect(0, 0, canvas.width, canvas.height);// Очищаем всю область холста
+  
+  let currentBarX = BarCoordinate.INITIAL_X;// координаты для 1 столбца и подписи
+  let currentLabelY = LabelCoordinate.INITIAL_Y;
+   
+    const gapBetweenBars = BarSize.WIDTH + Gap.HORIZONTAL; // отступ между столбцами
+
+   for (const item of items) {
+    
+    const barHeight = (item.value * BarSize.MAX_HEIGHT) / MAX_PERCENTAGE;// Высотa столбца с учётом процентов из данных
+    ctx.fillStyle = item.color;
+    ctx.font = `${Font.SIZE} ${Font.FAMILY}`;    
+    ctx.save();// Запоминаем параметры холста    
+    ctx.translate(0, canvas.height);// Сдвигаем начало коодинат     
+    ctx.rotate(-Math.PI/2);// перевод градусов в радианы    
+    ctx.fillText(item.name.toUpperCase(), LabelCoordinate.INITIAL_X, currentLabelY);// Рисуем текст снизу вверх    
+    ctx.restore();// Возвращаемся к изначальной системе координат     
+    ctx.fillRect(currentBarX, BarCoordinate.INITIAL_Y, BarSize.WIDTH, -barHeight); // Рисуем столбец    
+    currentBarX += gapBetweenBars;// Для следующего столбца обновляем координаты с учётом отступа
+    currentLabelY += gapBetweenBars;
+  }
+};
+
+
+formElement.addEventListener(`submit`, (evt) => {
+  // Отменяем действие по умолчанию — отправку формы на сервер (которого нет)
+  evt.preventDefault();
+
+  // Отрисовываем график
+  renderChart(getData(inputElements));
+  // Сбрасываем значения полей ввода
+  formElement.reset();
+});
+        </script>
+      </section>
+            
+        </div>
+        
         </div>
 
 </div>
